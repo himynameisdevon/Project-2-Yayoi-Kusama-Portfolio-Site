@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayoi Kusama - Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gaegu&family=Macondo&family=Macondo+Swash+Caps&family=Marhey:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Central Mobile Frame Container -->
+    <div class="site-container gallery-container">
+
+        <!-- Navigation Bar -->
+        <nav class="pill-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="works.html" class="active"><span class="home-dots">Gallery</span></a></li>
+                <li><a href="bio.html">Biography</a></li>
+                <li><a href="awards.html">Awards</a></li>
+            </ul>
+        </nav>
+
+        <!-- Title Header -->
+        <div class="giant-title-box">
+            <h2>
+                <span class="orange">G</span><span class="blue">a</span><span class="yellow">l</span><span
+                    class="pink">l</span><span class="green">e</span><span class="red">r</span><span
+                    class="blue">Y</span>
+            </h2>
+        </div>
+
+        <!-- Gallery Staggered Streams with Macondo Swash Caps Curved Headings -->
+        <main class="gallery-stream">
+
+            <!-- Item 1: Pumpkins (Staggered Right) -->
+            <div class="gallery-item item-right">
+                <div class="image-wrapper">
+                    <svg class="svg-curve" viewBox="0 0 300 200">
+                        <path id="curve-pumpkins" d="M 20,150 A 130,130 0 0,1 280,150" fill="none"
+                            stroke="transparent" />
+                        <text>
+                            <textPath href="#curve-pumpkins" startOffset="50%" text-anchor="middle"
+                                class="curved-title">Pumpkins</textPath>
+                        </text>
+                    </svg>
+                    <img src="img/pumpkin.jpg" alt="big pumpkin on the sea side" class="circular-image">
+                </div>
+            </div>
+
+            <!-- Item 2: Obliteration Room (Staggered Left) -->
+            <div class="gallery-item item-left">
+                <div class="image-wrapper obliteration">
+                    <svg class="svg-curve" viewBox="0 0 300 200">
+                        <path id="curve-obliteration" d="M 20,150 A 130,130 0 0,1 280,150" fill="none"
+                            stroke="transparent" />
+                        <text>
+                            <textPath href="#curve-obliteration" startOffset="70%" text-anchor="middle"
+                                class="curved-title">Obliteration Room</textPath>
+                        </text>
+                    </svg>
+                    <img src="img/dot room 01.jpg" alt="dot room" class="circular-image">
+                </div>
+            </div>
+
+            <!-- Item 3: Naussis Garden (Staggered Right) -->
+            <div class="gallery-item item-right">
+                <div class="image-wrapper">
+                    <svg class="svg-curve" viewBox="0 0 300 200">
+                        <path id="curve-narcissus" d="M 20,150 A 130,130 0 0,1 280,150" fill="none"
+                            stroke="transparent" />
+                        <text>
+                            <textPath href="#curve-narcissus" startOffset="50%" text-anchor="middle"
+                                class="curved-title">Naussis Garden</textPath>
+                        </text>
+                    </svg>
+                    <img src="img/garden.jpg" alt="metal balls on lake" class="circular-image">
+                </div>
+            </div>
+
+        </main>
+
+
+        <!-- Decorative Blue Shape Graphic from your Mockup -->
+        <div class="bottom-accent-circle"></div>
+
+    </div>
+
+</body>
+
+</html>

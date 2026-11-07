@@ -1,0 +1,287 @@
+/* ==========================================================================
+   1. Google Fonts Verification (Imports all specific project fonts)
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/home.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* ==========================================================================
+   2. Narrow Portrait Layout Frame (UPDATED: Reaches outer container edges)
+   ========================================================================== */
+.site-container {
+    width: 100%;
+
+    min-height: 100vh;
+    /* CHANGED: Switched horizontal padding to 0 so contents can flush to edges */
+    padding: 30px 91px 80px 0px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==========================================================================
+   3. Pill Navigation Elements
+   ========================================================================== */
+.pill-nav {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px; 
+}
+
+.pill-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px; 
+    font-size: 1.3rem; 
+    font-family: "Marhey", sans-serif;
+}
+
+.pill-nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    padding: 4px 8px;
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.pill-nav a:hover, 
+.pill-nav a.active {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   5. Headline Typography & Absolute Alignment 
+   ========================================================================== */
+.giant-title-box {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 35px 0; 
+    clear: both; 
+}
+
+.giant-title-box h1,
+.giant-title-box h2 {
+    font-family: "Macondo Swash Caps", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff7f7;
+    font-size: 4rem; 
+    letter-spacing: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 4px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.giant-title-box h1 span,
+.giant-title-box h2 span {
+    display: inline-block;
+    -webkit-text-stroke: 2px #000000; 
+    text-shadow: 2px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* Primary Color Swatches from Figma Palette */
+.orange { color: #F1AE74; }
+.blue   { color: #4B7FDA; }
+.pink   { color: #F592CA; }
+.yellow { color: #F9ED9D; }
+.red    { color: #D07676; }
+.green  { color: #4BB936; }
+
+/* ==========================================================================
+   6. Home Page Summary Section Layout
+   ========================================================================== */
+.summary-block {
+    width: 100%;
+    /* Adds safe padding specifically to the home paragraph text columns */
+    padding: 20px 373px; 
+    
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.summary-content p {
+    font-family: "Marhey", sans-serif;
+    font-weight: 300; 
+    font-size: 1.25rem; 
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   7. Biography & Awards Timeline Stream Settings 
+   ========================================================================== */
+.bio-block,
+.awards-block {
+    width: 100%;
+}
+
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    width: 100%;
+    padding: 0 373px;
+}
+
+.timeline-item {
+    
+    font-family: "Marhey", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 35px; 
+}
+
+/* Base custom pseudo-element timeline bullets */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 6px; 
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+/* Individual timeline item theme assignments */
+.bullet-orange::before { background-color: #F1AE74; }
+.bullet-blue::before   { background-color: #4B7FDA; }
+.bullet-pink::before   { background-color: #F592CA; }
+.bullet-yellow::before { background-color: #F9ED9D; }
+.bullet-red::before    { background-color: #D07676; }
+.bullet-green::before  { background-color: #4BB936; }
+
+/* ==========================================================================
+   8. Gallery Subpage Specific Staggered Layout & Curved SVG Text Paths
+   ========================================================================== */
+.gallery-container {
+    position: relative;
+    overflow: hidden; 
+    padding-bottom: 120px;
+}
+
+.gallery-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 130px; 
+    width: 100%;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    display: flex;
+    width: 100%;
+}
+
+/* UPDATED: Removed tracking offsets so images flush natively against the walls */
+.item-right {
+    justify-content: flex-end;
+    padding-right: 0px; 
+}
+
+.item-left {
+    justify-content: flex-start;
+    padding-left: 0px; 
+}
+
+/* Base 240px Image Wrapper Box dimensions */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+}
+
+.gallery-container .circular-image {
+    width: 480px;
+    height: 480x;
+    aspect-ratio: 1 / 1; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    display: block;
+    position: relative; 
+    z-index: 1;
+}
+
+.obliteration{
+    position: relative;
+    left: -40px;
+}
+
+.svg-curve {
+    position: absolute;
+    top: -140px; 
+    left: 0;
+    width: 480px;
+    height: 480px;
+    z-index: 999 !important; 
+    overflow: visible !important; 
+    pointer-events: none; 
+}
+
+.svg-curve svg,
+.svg-curve path,
+.svg-curve text {
+    overflow: visible !important; 
+}
+
+.curved-title {
+    font-family: "Macondo Swash Caps", cursive;
+    font-size: 1.6rem; 
+    font-weight: 700;
+    fill: #000000; 
+    letter-spacing: 0.5px;
+}
+
+/* Large abstract blue decorative background shape */
+.bottom-accent-circle {
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 220px;
+    height: 220px;
+    background-color: #4B7FDA; 
+    border-radius: 50%;
+    z-index: -1; 
+    pointer-events: none;
+}
